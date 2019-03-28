@@ -1,5 +1,6 @@
 require "pry"
 
+<<<<<<< HEAD
 
 # def word_substituter(string)
 #     tweet_array = string.split
@@ -26,6 +27,8 @@ require "pry"
 
 
 
+=======
+>>>>>>> eea85cf18f4454b2485febfa816a03d28014ec78
 def dictionary 
 
 words = {
@@ -34,7 +37,10 @@ words = {
   "two": "2",
   "too": "2",
   "for": "4",
+<<<<<<< HEAD
   "For": "4",
+=======
+>>>>>>> eea85cf18f4454b2485febfa816a03d28014ec78
   "four": "4",
   "be": "b",
   "you": "u",
@@ -45,6 +51,7 @@ end
 
 
 def word_substituter(string)
+<<<<<<< HEAD
   tweet_array = string.split
 
   dictionary.map {|key, val|
@@ -105,4 +112,28 @@ end
 
 
 
+=======
+    tweet_array = string.split
+  new_words_array = dictionary.values
+  
+    symbol_keys = dictionary.keys
+  old_words_array = symbol_keys.map {|x| x.to_s}
+   
+
+  i = 0
+  while i < tweet_array.length
+    y = 0
+    while y < old_words_array.length
+      if tweet_array[i].include?(old_words_array[y])
+        tweet_array[i].replace(new_words_array[y])
+      end
+      binding.pry
+    y += 1
+    end
+    i += 1
+  end
+ tweet_array
+
+end
+>>>>>>> eea85cf18f4454b2485febfa816a03d28014ec78
 
